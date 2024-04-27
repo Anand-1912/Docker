@@ -85,3 +85,19 @@ The container runs in the background by default.
 - docker image inspect <IMAGE_NAME>
 
 - The Docker command "EXPORT <PORT>" documents the port that we are using inside the container. This can be verified when we inspect the image using the inspect command. Refer the image [01.Inspecting_Images.png]
+
+- docker cp <LOCAL_FILE_PATH> <CONTAINER_NAME>:\<CONTAINER_PATH>
+
+  - copies the files from the local path to the container.
+
+  - use case:
+
+    - Application Configuration files can be copied to container from the local
+
+- docker cp <CONTAINER_NAME>:\<CONTAINER_PATH> <LOCAL_FILE_PATH>
+
+  - copies the files from the container to the local path.
+
+  - use case:
+
+    - Logs written by the Container can be copied to the local path (in the host)
