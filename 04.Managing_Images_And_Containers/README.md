@@ -40,11 +40,13 @@ The container runs in the background by default.
 
 - docker start relaxed_grothendieck
 
-  - port is not published in the start command.If the container was published with the port when it was created (using run command), then it starts with the same published port.
+  - port is not published in the "start" command.If the container was published with the port when it was created (using run command), then it starts with the same published port.
 
 - docker attach <CONTAINER_NAME>
 
-  - To Attach the containers
+  - To Attach the containers (to listen for the outputs)
+
+  - Note: To enter inputs to the container, we have to run the container in "Interactive" mode.
 
 - docker run -d -p 3000:80 <IMAGE_ID>
 
@@ -59,3 +61,27 @@ The container runs in the background by default.
   - 'flag f' - Furture logs
 
   - retrieves the output / logs written by the container and attach the container to listen for the future logs from the container
+
+- docker rmi <IMAGE_ID_1> [ <IMAGE_ID_2>,.....]
+
+  - removes the docker images identifed by the image ids.
+
+  - An image cannot be deleted by rmi command if it is used either by a STOPPED or RUNNING container.
+
+- docker image prune
+
+- removes all the unused images (not used by any running or stopped containers)
+
+- docker rm <CONTAINER_NAME>
+
+- docker container prune
+
+  - removes the stopped containers. Running containers cannot be removed.
+
+- docker run -d -p 3000:80 --rm <IMAGE_ID>
+
+  - "flag --rm" removes the container automatically when the container is stopped
+
+- docker image inspect <IMAGE_NAME>
+
+- The Docker command "EXPORT <PORT>" documents the port that we are using inside the container. This can be verified when we inspect the image using the inspect command. Refer the image [01.Inspecting_Images.png]
