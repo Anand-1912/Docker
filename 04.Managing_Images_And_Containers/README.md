@@ -101,3 +101,23 @@ The container runs in the background by default.
   - use case:
 
     - Logs written by the Container can be copied to the local path (in the host)
+
+#### Naming Containers and Tagging Images
+
+- docker run -d -p 3000:80 --name goalsapp myimage:1
+
+  - the flag "--name" in the docker run command names the container when it is created.
+
+  - here "goalsapp" is the container name and it is built on the image "myimage:1"
+
+- Image name consists of two parts: <REPO_NAME>:<TAG>. "tag" is optional though.
+
+---
+
+#### Examples
+
+1.  docker build -t node:1
+
+2.  docker build -t node:2
+
+3.  docker build -t node:latest
