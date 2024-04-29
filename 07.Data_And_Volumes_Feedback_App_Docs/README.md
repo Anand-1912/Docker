@@ -55,6 +55,8 @@
 
 Bind Mounts
 
+**Note**: used in Development and not in Production
+
 ---
 
 1. Can be used for Code Sharing
@@ -113,3 +115,9 @@ Managing Docker Volumes
 4. docker volume prune
 
 5. docker volume ls
+
+---
+
+## Docker Ignore file
+
+.dockerignore file contains the list of files and folders that needs to be ignored by docker when copying files from localhost to container when executing `COPY . .`
