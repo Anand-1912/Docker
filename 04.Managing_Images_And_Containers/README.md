@@ -62,7 +62,7 @@ The container runs in the background by default.
 
   - retrieves the output / logs written by the container and attach the container to listen for the future logs from the container
 
-- docker rmi <IMAGE_ID_1> [ <IMAGE_ID_2>,.....]
+- docker rmi <IMAGE_ID_1> ,[ <IMAGE_ID_2>,.....]
 
   - removes the docker images identifed by the image ids.
 
@@ -84,7 +84,7 @@ The container runs in the background by default.
 
 - docker image inspect <IMAGE_NAME>
 
-- The Docker command "EXPORT <PORT>" documents the port that we are using inside the container. This can be verified when we inspect the image using the inspect command. Refer the image [01.Inspecting_Images.png]
+- The Docker command **EXPORT <PORT>** documents the port that we are using inside the container. This can be verified when we inspect the image using the inspect command. Refer the image [01.Inspecting_Images.png]
 
 - docker cp <LOCAL_FILE_PATH> <CONTAINER_NAME>:\<CONTAINER_PATH>
 
@@ -92,7 +92,7 @@ The container runs in the background by default.
 
   - use case:
 
-    - Application Configuration files can be copied to container from the local
+    - Application Configuration files can be copied to container from the local host
 
 - docker cp <CONTAINER_NAME>:\<CONTAINER_PATH> <LOCAL_FILE_PATH>
 

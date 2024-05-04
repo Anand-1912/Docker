@@ -1,4 +1,4 @@
-1. Images can ben pushed to Github Container Registry as Github Packages.
+1. Images can ben pushed to Github Container Registry (**GHCR**) as Github Packages.
 
 2. We can use **PAT** (Personal Access Tokens) to push the images from our local machine.
 

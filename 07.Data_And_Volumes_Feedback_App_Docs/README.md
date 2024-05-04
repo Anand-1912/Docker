@@ -98,7 +98,7 @@ Bind Mounts
 
 4. In this example, if we dont use Named volumes for the feedback path, then since Bind mount has been enabled for the entire App folder, the container will write the feedback files directly inside the local system feedback path which we can manage through file system.
 
-5. In this example, Anonymous volume is used to retain node_modules folder until the container is running. The reason we have anonymous volume here is to avoid the folder node_modules being overwritten by the instruction **docker command COPY . .** in the Docker file.
+5. In this example, Anonymous volume is used to retain node_modules folder until the container is stopped. The reason we have anonymous volume here is to avoid the folder node_modules being overwritten by the instruction **docker command COPY . .** in the Docker file.
 
 ---
 
