@@ -12,7 +12,7 @@ docker run -p <LOCAL_HOST_PORT>:<PORT_INSIDE_THE_CONTAINER> <IMAGE_ID>
 
 docker run -p 3000:3000 <IMAGE_ID>
 
-#### lists all the running container
+#### lists all the running containers
 
 docker ps
 
