@@ -121,3 +121,7 @@ Managing Docker Volumes
 ## Docker Ignore file
 
 .dockerignore file contains the list of files and folders that needs to be ignored by docker when copying files from localhost to container when executing `COPY . .`
+
+### References
+
+1. [spacelift.io-volumes](https://spacelift.io/blog/docker-volumes)

@@ -116,8 +116,8 @@ The container runs in the background by default.
 
 #### Examples
 
-1.  docker build -t node:1
+1.  docker build -t node:1 .
 
-2.  docker build -t node:2
+2.  docker build -t node:2 .
 
-3.  docker build -t node:latest
+3.  docker build -t node:latest .

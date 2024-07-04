@@ -1,11 +1,11 @@
-import express from 'express';
+import express from "express";
 
-import connectToDatabase from './helpers.mjs'
+import connectToDatabase from "./helpers.mjs";
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('<h2>Hi there!</h2>');
+app.get("/", (req, res) => {
+  res.send("<h2>Hi there!</h2>");
 });
 
 await connectToDatabase();
