@@ -2,6 +2,8 @@
 
 docker build .
 
+docker build -f Dockerfile_Copy .
+
 #### lists all the docker images
 
 docker images
@@ -12,10 +14,16 @@ docker run -p <LOCAL_HOST_PORT>:<PORT_INSIDE_THE_CONTAINER> <IMAGE_ID>
 
 docker run -p 3000:3000 <IMAGE_ID>
 
-#### lists all the running container
+#### lists all the running containers
 
 docker ps
 
 #### stops a running container
 
 docker stop <CONTAINER_ID>
+
+#### Inspecting the image file system.
+
+use Dive
+
+[Dive](https://github.com/wagoodman/dive)

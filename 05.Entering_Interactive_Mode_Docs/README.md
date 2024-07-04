@@ -6,6 +6,6 @@
 
 3. docker start -a -i <CONTAINER_NAME>
 
-   - "flag -a" is required as the "start" command by default starts the stopped container in Detached mode
+   - "flag -a" is required as the "start" command by default starts the stopped container in Detached mode.
 
    - "flag -i" starts the container in Interactive mode so that we can input data into the container.

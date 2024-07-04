@@ -10,4 +10,5 @@ app.get("/", (req, res) => {
 
 await connectToDatabase();
 
-app.listen(3000);
+// accessing an environment variable inside the application
+app.listen(process.env.PORT);
