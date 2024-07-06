@@ -1,0 +1,46 @@
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    container_name: mongodb
+    # env_file:
+    #   - ./env/mongo.en
+
+  backend:
+    build: ./backend
+    # build:
+    #   context: ./backend
+    #   dockerfile: Dockerfile
+    #   args:
+    #     some-arg:  1
+    ports:
+      - "3000:80" #"host-port:container-port"
+    volumes:
+      - logs:/app/logs # named volume
+      - ./backend:/app # bind mounts
+      - /app/node_modules # anonymous volumes
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./frontend/src:/app/src
+    # to start the service in 'interactive' mode
+    stdin_open: true # -i
+    tty: true # -t
+    depends_on:
+      - backend
+
+# The below 'volumes configuration' is required for named volumes alone and not for anonymous volumes and bind mounts
+volumes:
+  data:
+  logs:
