@@ -100,6 +100,8 @@ Bind Mounts
 
 5. In this example, Anonymous volume is used to retain node_modules folder until the container is stopped. The reason we have anonymous volume here is to avoid the folder node_modules being overwritten by the instruction **docker command COPY . .** in the Docker file.
 
+-- check networking module 2 for better understanding
+
 ---
 
 Managing Docker Volumes
