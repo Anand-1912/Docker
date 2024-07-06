@@ -16,7 +16,7 @@
 
 - To start the services in detached mode `docker-compose up -d`
 
-- `docker-compose down` is used to stop and delte the containers/services. It also deletes the network but not the volumes.
+- `docker-compose down` is used to stop and delete the containers/services. It also deletes the network but not the volumes.
 
 - `docker-compose down -v` - the _v flag_ has to be used to remove the volumes along with the services and network.
 
