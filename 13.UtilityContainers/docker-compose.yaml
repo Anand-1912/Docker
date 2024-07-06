@@ -1,0 +1,10 @@
+services:
+  mynodeutility:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+    stdin_open: true # -i
+    tty: true # -t
+    container_name: mynodeutility
